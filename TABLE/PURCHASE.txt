@@ -1,0 +1,21 @@
+CREATE TABLE HRISHI.purchase_detail
+(
+pru_sln NUMBER(9) CONSTRAINT pru_sln_pk PRIMARY KEY,
+vendor_id NUMBER(4) CONSTRAINT ven_id_fk_pur REFERENCES hrishi.vendor_detail(vendor_id)
+                    ON DELETE CASCADE,
+vendor_name VARCHAR2(15) CONSTRAINT ven_na_pur_nn NOT NULL,
+pur_date        DATE DEFAULT SYSDATE,
+total_pur_amount NUMBER(12,2),
+disc             NUMBER(4,2),
+tax              NUMBER(4,2),
+total_amount     NUMBER(15,2) )
+PCTFREE 5
+PCTUSED 30
+INITRANS 10
+MAXTRANS 15
+TABLESPACE SAN
+STORAGE(INITIAL 50K
+        NEXT 50K
+        MAXEXTENTS 10
+        PCTINCREASE 20)
+/

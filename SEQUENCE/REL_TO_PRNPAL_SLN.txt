@@ -1,0 +1,3 @@
+create sequence RPL_TO_PRNPAL_SLN
+
+/

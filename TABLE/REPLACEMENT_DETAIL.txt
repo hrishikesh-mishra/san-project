@@ -1,0 +1,19 @@
+create table HRISHI.REPLACEMENT_DETAIL
+(
+rpl_sln NUMBER(9) CONSTRAINT rpl_sln_pk PRIMARY KEY ,
+replacer_type VARCHAR2(10) CONSTRAINT check_rplr_typ
+              CHECK (replacer_type in ('customer','party')),
+replacer_id  NUMBER(9) CONSTRAINT rplr_id_nn NOT NULL,
+replacer_name VARCHAR2(10) NOT NULL,
+replace_date DATE DEFAULT SYSDATE
+)
+PCTFREE 5
+PCTUSED 30
+INITRANS 10
+MAXTRANS 15
+TABLESPACE SAN
+STORAGE(INITIAL 50K
+        NEXT 50K
+        MAXEXTENTS 10
+        PCTINCREASE 20)        
+/

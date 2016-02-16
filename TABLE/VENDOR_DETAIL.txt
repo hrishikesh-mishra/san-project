@@ -1,0 +1,18 @@
+CREATE TABLE  hrishi.vendor_detail(
+vendor_id      NUMBER(4)      CONSTRAINT ven_id_pk PRIMARY KEY,
+vendor_name    VARCHAR2(25)   CONSTRAINT ven_na_nn NOT NULL,
+vendor_add     VARCHAR2(30)   CONSTRAINT ven_add_nn NOT NULL,
+vendor_pho     VARCHAR2(15)   DEFAULT NULL,
+vendor_eid     VARCHAR2(30)   CONSTRAINT lower_ven_eid check(vendor_eid = lower(vendor_eid)),
+deler_of       VARCHAR2(20)   DEFAULT NULL,
+entry_date     DATE           DEFAULT SYSDATE)
+PCTFREE 5
+PCTUSED 30
+INITRANS 10
+MAXTRANS 15
+TABLESPACE SAN
+STORAGE(INITIAL 50K
+        NEXT 50K
+        MAXEXTENTS 10
+        PCTINCREASE 20)
+/

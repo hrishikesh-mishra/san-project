@@ -1,0 +1,21 @@
+create table HRISHI.CURRENT_EMP_DETAIL
+(
+eid          NUMBER(9) CONSTRAINT eid_pk PRIMARY KEY,
+ename        VARCHAR2(25) CONSTRAINT ename_nn NOT NULL,
+sex          CHAR(1),
+age          NUMBER(3),
+address      VARCHAR2(50),
+phno         VARCHAR(15),
+destination  VARCHAR2(15),
+join_date    DATE   DEFAULT SYSDATE
+)
+PCTFREE 5
+PCTUSED 30
+INITRANS 10
+MAXTRANS 15
+TABLESPACE SAN
+STORAGE(INITIAL 50K
+        NEXT 50K
+        MAXEXTENTS 10
+        PCTINCREASE 20)
+/

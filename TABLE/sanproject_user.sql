@@ -1,0 +1,62 @@
+create table hrishi.sanproject_user
+(
+user_ID  VARCHAR2(15) CONSTRAINT userID_pk PRIMARY KEY,
+password VARCHAR2(15),
+creation_date DATE,
+adm     NUMBER(1),
+admPE   NUMBER(1),
+admPU   NUMBER(1),
+admCU   NUMBER(1),
+admMU   NUMBER(1),
+admCP   NUMBER(1),
+admBU   NUMBER(1),
+admRv   NUMBER(1),
+pur     NUMBER(1),
+purVen  NUMBER(1),
+purPur  NUMBER(1),
+purPR   NUMBER(1),
+sal     NUMBER(1),
+salCust  NUMBER(1),
+salPrt  NUMBER(1),
+salSal  NUMBER(1),	
+salSR  NUMBER(1),
+rpl    NUMBER(1),
+rplOSR NUMBER(1),
+rplRF  NUMBER(1),
+rplRTP NUMBER(1),
+rplDPE NUMBER(1),
+empS   NUMBER(1),
+empSJE NUMBER(1),
+empSRE NUMBER(1),
+empSES NUMBER(1),
+matD   NUMBER(1),
+matDSD NUMBER(1),
+matDPD NUMBER(1),
+matDSalD   NUMBER(1),
+matDOSRD NUMBER(1),
+matDRTP NUMBER(1),
+matDRFC NUMBER(1),
+matDED  NUMBER(1),
+matDRED NUMBER(1),
+rpt     NUMBER(1),
+rptPR   NUMBER(1),
+rptVR   NUMBER(1),
+rptPrtR NUMBER(1),
+rptCR   NUMBER(1),
+rptPurR   NUMBER(1),
+rptSalR NUMBER(1),
+rptStkR NUMBER(1),
+rptRplR NUMBER(1),
+rptDPR NUMBER(1),
+rptER NUMBER(1)
+)
+PCTFREE 5
+PCTUSED 30
+INITRANS 10
+MAXTRANS 15
+TABLESPACE SAN
+STORAGE(INITIAL 50K
+        NEXT 50K
+        MAXEXTENTS 10
+        PCTINCREASE 20)
+/

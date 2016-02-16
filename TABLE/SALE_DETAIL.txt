@@ -1,0 +1,24 @@
+
+
+
+create table HRISHI.SALE_DETAIL
+(
+sale_sln NUMBER(9) CONSTRAINT sale_sln_pk PRIMARY KEY,
+type_of_cust   VARCHAR2(10) CONSTRAINT check_typeOfCust CHECK (type_of_cust in ('customer','party')),
+cust_id NUMBER(10) CONSTRAINT cust_id_nn NOT NULL,
+Cust_name VARCHAR2(20) CONSTRAINT cust_nam_nn NOT NULL,
+sale_date DATE DEFAULT SYSDATE,
+total_sale_amount NUMBER(12,2),
+disc    NUMBER(4,2),
+tax     NUMBER(4,2),
+total_amount NUMBER(15,2))
+PCTFREE 5
+PCTUSED 30
+INITRANS 10
+MAXTRANS 15
+TABLESPACE SAN
+STORAGE(INITIAL 50K
+        NEXT 50K
+        MAXEXTENTS 10
+        PCTINCREASE 20)        
+/

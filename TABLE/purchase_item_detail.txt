@@ -1,0 +1,17 @@
+CREATE TABLE hrishi.purchase_item_detail
+(
+item_sln NUMBER(9) CONSTRAINT item_sln_fk REFERENCES hrishi.purchase_detail(pru_sln) ON DELETE CASCADE,
+item_name VARCHAR(20) CONSTRAINT item_nam_nn NOT NULL,
+qty       NUMBER(10),
+PPU       NUMBER(12,2),
+total     NUMBER(12,2))
+PCTFREE 5
+PCTUSED 30
+INITRANS 10
+MAXTRANS 15
+TABLESPACE SAN
+STORAGE(INITIAL 50K
+        NEXT 50K
+        MAXEXTENTS 10
+        PCTINCREASE 20)
+/

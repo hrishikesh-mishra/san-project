@@ -1,0 +1,6 @@
+create tablespace san
+datafile 'e:\san.dbf' size 10m reuse
+autoextend on
+next 2m
+maxsize unlimited
+/

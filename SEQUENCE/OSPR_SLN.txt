@@ -1,0 +1,3 @@
+create sequence OSPR_SLN
+
+/

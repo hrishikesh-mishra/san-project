@@ -1,0 +1,17 @@
+CREATE TABLE hrishi.product_detail 
+(
+  product_name VARCHAR2(30) CONSTRAINT pro_name_pk PRIMARY KEY,
+  category     VARCHAR2(25) CONSTRAINT cate_nn NOT NULL,
+  manuf        VARCHAR2(15) CONSTRAINT man_nn  NOT NULL,
+  e_date       DATE         DEFAULT SYSDATE
+)
+PCTFREE 5
+PCTUSED 30
+INITRANS 10
+MAXTRANS 15
+TABLESPACE SAN
+STORAGE(INITIAL 50K
+        NEXT 50K
+        MAXEXTENTS 10
+        PCTINCREASE 20)
+/

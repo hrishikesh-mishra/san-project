@@ -1,0 +1,19 @@
+create table HRISHI.STOCK_DETAIL
+(
+product_name     VARCHAR2(30)  CONSTRAINT pro_nam_pk PRIMARY KEY,
+category         VARCHAR2(25) CONSTRAINT category_nn     NOT NULL,
+total_pur_qty    NUMBER(15),
+total_sale_qty    NUMBER(15),
+stock_in_hand     NUMBER(15),
+last_modify_date DATE     DEFAULT SYSDATE
+)
+PCTFREE 5
+PCTUSED 30
+INITRANS 10
+MAXTRANS 15
+TABLESPACE SAN
+STORAGE(INITIAL 50K
+        NEXT 50K
+        MAXEXTENTS 10
+        PCTINCREASE 20)
+/

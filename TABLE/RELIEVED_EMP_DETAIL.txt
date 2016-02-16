@@ -1,0 +1,20 @@
+create table HRISHI.RELIEVED_EMP_DETAIL
+(
+ relSln        NUMBER(9)   CONSTRAINT relsln_pk PRIMARY KEY,
+ eid           NUMBER(9)   CONSTRAINT eid_nn    NOT NULL,
+ ename         VARCHAR2(25)CONSTRAINT enam_nn  NOT NULL,
+ destination   VARCHAR2(15),
+ doj           DATE,
+ dor           DATE DEFAULT SYSDATE
+)
+PCTFREE 5
+PCTUSED 30
+INITRANS 10
+MAXTRANS 15
+TABLESPACE SAN
+STORAGE(INITIAL 50K
+        NEXT 50K
+        MAXEXTENTS 10
+        PCTINCREASE 20)
+
+/
